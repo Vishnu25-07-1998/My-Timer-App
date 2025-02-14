@@ -1,0 +1,120 @@
+:root {
+  --error-color: #dd2c00;
+  --primary-color: #3f51b5;
+  --light-primary-color: #c5cae9;
+  --dark-primary-color: #303f9f;
+  --accent-color: #ff4081;
+  --light-accent-color: #ff80ab;
+  --dark-accent-color: #f50057;
+  --light-theme-background-color: #fff;
+  --light-theme-base-color: #000;
+  --light-theme-text-color: #212121;
+  --light-theme-secondary-color: #737373;
+  --light-theme-disabled-color: #9b9b9b;
+  --light-theme-divider-color: #dbdbdb;
+  --dark-theme-background-color: #212121;
+  --dark-theme-base-color: #fff;
+  --dark-theme-text-color: #fff;
+  --dark-theme-secondary-color: #bcbcbc;
+  --dark-theme-disabled-color: #646464;
+  --dark-theme-divider-color: #3c3c3c;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .2s linear;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 1em;
+  width: 100%;
+  border: 1px solid #c5cae9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+  max-width: 200px;
+  width: 100%;
+}
+
+.main-content {
+  padding: 1em;
+  width: 100%;
+}
+
+.task-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.tasks {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1em;
+}
+
+.tasks:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+progress {
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.task-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-head {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+.time {
+  font-size: 0.8em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.history-title {
+  font-weight: bold;
+  color: #888;
+  font-size: 0.85em;
+  margin: 1em 0;
+}
